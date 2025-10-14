@@ -28,6 +28,10 @@ export const ROUTES: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: "**",
+    component: NotFoundComponent
   }
 ];
 
@@ -52,7 +56,9 @@ export const ROUTES: Routes = [
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES, {
+      enableTracing: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
