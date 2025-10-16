@@ -7,7 +7,8 @@
     <nav>
       <ul>
         <li>
-          <button class="menu-item" mat-button [matMenuTriggerFor]="menu">Shop
+          <button class="menu-item" routerLinkActive="active-link" ariaCurrentWhenActive="page" mat-button
+            [matMenuTriggerFor]="menu">Shop
             <span>&#8964;</span>
             <mat-menu class="menu-dropdown" #menu="matMenu">
               <button mat-menu-item [routerLink]="[ROUTER_TOKENS.SHOP]"
@@ -21,8 +22,10 @@
             </mat-menu>
           </button>
         </li>
-        <li><button [routerLink]="[ROUTER_TOKENS.CONTACT]" class="menu-item" mat-button>Contact</button></li>
-        <li><button [routerLink]="[ROUTER_TOKENS.ABOUT]" class="menu-item" mat-button>About</button></li>
+        <li><button [routerLink]="[ROUTER_TOKENS.CONTACT]" class="menu-item" mat-button routerLinkActive="active-link"
+            ariaCurrentWhenActive="page">Contact</button></li>
+        <li><button [routerLink]="[ROUTER_TOKENS.ABOUT]" class="menu-item" routerLinkActive="active-link"
+            ariaCurrentWhenActive="page" mat-button>About</button></li>
       </ul>
     </nav>
     <div class="header-icons">
