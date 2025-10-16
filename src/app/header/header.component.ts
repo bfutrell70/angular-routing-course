@@ -20,9 +20,9 @@ export class HeaderComponent {
   readonly Category = Category;
   constructor(
     private readonly pieService: PieService
-  ){}
+  ) { }
 
-  changeCategory(category: Category){
+  changeCategory(category: Category) {
     this.pieService.setSelectedCategory(category);
   }
 
