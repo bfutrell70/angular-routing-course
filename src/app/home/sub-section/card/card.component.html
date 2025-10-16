@@ -1,6 +1,5 @@
 <div class="pie-item">
-  <button
-  ><img [src]="pie.image" alt="Delicious Apple Pie" /></button>
+  <button (click)="selectPie(pie)"><img [src]="pie.image" alt="Delicious Apple Pie" /></button>
   <div class="quantity-selector">
     <button (click)="cartService.decrementCartItem(pie)">-</button>
     <span (click)="cartService.addCartItem(pie)">{{ pie.quantity ? pie.quantity + ' in Cart' : 'Add to Cart'}}</span>
