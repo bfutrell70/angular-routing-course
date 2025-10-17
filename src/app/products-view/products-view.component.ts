@@ -1,8 +1,9 @@
 import { Component, Input, inject } from '@angular/core';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { PieService } from '../services/pie.service';
+import { RouterOutlet } from "../../../node_modules/@angular/router";
 
 @Component({
   standalone: true,
@@ -10,6 +11,7 @@ import { PieService } from '../services/pie.service';
     DetailViewComponent,
     SideMenuComponent,
     MatExpansionModule,
+    RouterOutlet
   ],
   selector: 'app-products-view',
   templateUrl: './products-view.component.html',
