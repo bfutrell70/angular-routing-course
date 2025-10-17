@@ -1,12 +1,7 @@
 <div class="side-nav">
-  <button
-    *ngFor="let pie of pies$ | async"
-    class="image-button"
-    (click)="selectPie(pie.id)"
-  >
-    <img
-      [src]="pie.thumb"
-      [alt]="pie.title"
-    />
+  <button *ngFor="let pie of pies$ | async" class="image-button" [routerLink]="['./']"
+    [queryParams]="{ productId: pie.id}" queryParamsHandling="merge" routerLinkActive="active-link"
+    ariaCurrentWhenActive="page">
+    <img [src]="pie.thumb" [alt]="pie.title" />
   </button>
 </div>
