@@ -7,7 +7,8 @@ import { ReplaySubject, takeUntil } from 'rxjs';
 import { ContactForm } from '../models/contact-form';
 import { FormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { ROUTER_TOKENS } from '../app.routes';
 
 @Component({
   selector: 'app-cart',
@@ -50,8 +51,11 @@ export class CartComponent {
     })
   }
 
+  private readonly router = inject(Router);
+
   close() {
-    this.submitted = false;
+    //this.submitted = false;
+    this.router.navigate([{outlets: {[ROUTER_TOKENS.CART]: null}}])
   }
 
   ngOnDestroy(): void {
