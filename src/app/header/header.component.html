@@ -11,10 +11,14 @@
             [matMenuTriggerFor]="menu">Shop
             <span>&#8964;</span>
             <mat-menu class="menu-dropdown" #menu="matMenu">
-              <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.SEASONAL_PIE]" mat-menu-item>Seasonal Pies</button>
-              <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.FRUIT_PIE]" mat-menu-item>Fruit Pies</button>
-              <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.CHEESECAKE]" mat-menu-item>Cheesecakes</button>
-              <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.ALL]" mat-menu-item>All
+              <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.SEASONAL_PIE]" routerLinkActive="active-link-li"
+                mat-menu-item>Seasonal Pies</button>
+              <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.FRUIT_PIE]" routerLinkActive="active-link-li"
+                mat-menu-item>Fruit Pies</button>
+              <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.CHEESECAKE]" routerLinkActive="active-link-li"
+                mat-menu-item>Cheesecakes</button>
+              <button [routerLink]="[ROUTER_TOKENS.SHOP, Category.ALL]" routerLinkActive="active-link-li"
+                mat-menu-item>All
                 Pies</button>
             </mat-menu>
           </button>
