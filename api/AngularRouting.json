@@ -17,7 +17,7 @@
       "responses": [
         {
           "uuid": "ea9108fb-a50d-4c6f-81dc-529d53e629f8",
-          "body": "{\n  \"home\": false,\n  \"contact\": true\n}",
+          "body": "{\n  \"home\": false,\n  \"contact\": false\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
