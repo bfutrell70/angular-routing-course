@@ -55,6 +55,7 @@ export class CartComponent {
 
   close() {
     //this.submitted = false;
+    // removes the named route from the URL
     this.router.navigate([{outlets: {[ROUTER_TOKENS.CART]: null}}])
   }
 

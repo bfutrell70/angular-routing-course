@@ -1,75 +1,41 @@
 <header>
   <div class="site-header-wrapper">
     <h1>
-      <button [routerLink]="['/']" mat-menu-item><img src="../../assets/images/logo.png" alt="Bethany's Pie Shop Logo" /></button>
+      <button [routerLink]="['/']" mat-menu-item><img src="../../assets/images/logo.png"
+          alt="Bethany's Pie Shop Logo" /></button>
     </h1>
     <nav>
       <ul>
         <li>
-          <button
-            class="menu-item"
-            mat-button
-            [matMenuTriggerFor]="menu"
-            routerLinkActive="active-link"
-            ariaCurrentWhenActive="page"
-          >Shop
+          <button class="menu-item" mat-button [matMenuTriggerFor]="menu" routerLinkActive="active-link"
+            ariaCurrentWhenActive="page">Shop
             <span>&#8964;</span>
             <mat-menu class="menu-dropdown" #menu="matMenu">
-              <button
-                mat-menu-item
-                [routerLink]="['./' + ROUTER_TOKENS.SHOP, Category.SEASONAL_PIE]"
-                routerLinkActive="active-link-li"
-                ariaCurrentWhenActive="page"
-              >Seasonal Pies</button>
-              <button
-                mat-menu-item
-                [routerLink]="['./' + ROUTER_TOKENS.SHOP, Category.FRUIT_PIE]"
-                routerLinkActive="active-link-li"
-                ariaCurrentWhenActive="page"
-              >Fruit Pies</button>
-              <button
-                mat-menu-item
-                [routerLink]="['./' + ROUTER_TOKENS.SHOP, Category.CHEESECAKE]"
-                routerLinkActive="active-link-li"
-                ariaCurrentWhenActive="page"
-              >Cheesecakes</button>
-              <button
-                mat-menu-item
-                [routerLink]="['./' + ROUTER_TOKENS.SHOP, Category.ALL]"
-                routerLinkActive="active-link-li"
-                ariaCurrentWhenActive="page"
-              >All Pies</button>
+              <button mat-menu-item [routerLink]="['./' + ROUTER_TOKENS.SHOP, Category.SEASONAL_PIE]"
+                routerLinkActive="active-link-li" ariaCurrentWhenActive="page">Seasonal Pies</button>
+              <button mat-menu-item [routerLink]="['./' + ROUTER_TOKENS.SHOP, Category.FRUIT_PIE]"
+                routerLinkActive="active-link-li" ariaCurrentWhenActive="page">Fruit Pies</button>
+              <button mat-menu-item [routerLink]="['./' + ROUTER_TOKENS.SHOP, Category.CHEESECAKE]"
+                routerLinkActive="active-link-li" ariaCurrentWhenActive="page">Cheesecakes</button>
+              <button mat-menu-item [routerLink]="['./' + ROUTER_TOKENS.SHOP, Category.ALL]"
+                routerLinkActive="active-link-li" ariaCurrentWhenActive="page">All Pies</button>
             </mat-menu>
           </button>
         </li>
         <li>
-          <button
-            class="menu-item"
-            mat-button
-            [routerLink]="['./' + ROUTER_TOKENS.CONTACT]"
-            routerLinkActive="active-link"
-            ariaCurrentWhenActive="page"
-          >Contact</button>
+          <button class="menu-item" mat-button [routerLink]="['./' + ROUTER_TOKENS.CONTACT]"
+            routerLinkActive="active-link" ariaCurrentWhenActive="page">Contact</button>
         </li>
         <li>
-          <button
-            class="menu-item"
-            mat-button
-            [routerLink]="['./' + ROUTER_TOKENS.ABOUT]"
-            routerLinkActive="active-link"
-            ariaCurrentWhenActive="page"
-          >About</button>
+          <button class="menu-item" mat-button [routerLink]="['./' + ROUTER_TOKENS.ABOUT]"
+            routerLinkActive="active-link" ariaCurrentWhenActive="page">About</button>
         </li>
       </ul>
     </nav>
     <div class="header-icons">
       <ul>
         <li>
-          <button
-            mat-menu-item
-            [routerLink]="['/', {outlets}]"
-            queryParamsHandling="merge"
-          >
+          <button mat-menu-item [routerLink]="['/', {outlets}]" queryParamsHandling="merge">
             <span class="total-items">{{ totalItems() }}</span>
             <img src="../../assets/images/cart-icon.png" alt="shopping cart icon" />
           </button>
