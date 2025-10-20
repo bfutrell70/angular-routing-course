@@ -1,6 +1,6 @@
 {
   "uuid": "6740440a-4aeb-4f40-81c6-b521a4acc4ff",
-  "lastMigration": 27,
+  "lastMigration": 33,
   "name": "Angular Routing Api",
   "endpointPrefix": "",
   "latency": 0,
@@ -17,7 +17,7 @@
       "responses": [
         {
           "uuid": "ea9108fb-a50d-4c6f-81dc-529d53e629f8",
-          "body": "{\n  \"home\": true,\n  \"contact\": true\n}",
+          "body": "{\n  \"home\": false,\n  \"contact\": true\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -43,11 +43,14 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
-      "responseMode": null
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
       "uuid": "606d7f1e-1a2c-4d11-97e2-9bcce8053df3",
@@ -84,11 +87,14 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
-      "responseMode": null
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -132,5 +138,6 @@
       "value": ""
     }
   ],
-  "data": []
+  "data": [],
+  "callbacks": []
 }
