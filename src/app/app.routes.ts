@@ -37,7 +37,9 @@ export const ROUTES: Routes = [
   },
   {
     path: ROUTER_TOKENS.ABOUT,
-    component: AboutComponent,
+    // component: AboutComponent,
+    // loadChildren is a promise
+    loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
   },
   {
     path: ROUTER_TOKENS.CHECKOUT,
