@@ -8,7 +8,7 @@ import { AuthService } from './auth.service';
 export class HelloService {
   readonly authService = inject(AuthService);
   getUserHello(){
-    return timer(3000).pipe(
+    return timer(200).pipe(
       switchMap(() => this.authService.user$),
       map((user) => `Hello ${user}!`),
     )

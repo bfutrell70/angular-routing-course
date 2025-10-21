@@ -8,6 +8,7 @@ import { FeatureFlagService } from './services/feature-flag.service';
 import { map } from 'rxjs';
 import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
 import { NotReadyComponent } from './not-ready/not-ready.component';
+import { HelloService } from './services/hello.service';
 
 export enum ROUTER_TOKENS {
   HOME = 'home',
@@ -60,7 +61,14 @@ export const ROUTES: Routes = [
     },
     // checks if the user is authorized to view the contact page
     authRouteGuard(ROUTER_TOKENS.CONTACT)
-    ]
+    ],
+    resolve: {
+      userHello: () => {
+        const helloService = inject(HelloService);
+
+        return helloService.getUserHello();
+      }
+    }
   },
   {
     path: ROUTER_TOKENS.ABOUT,
